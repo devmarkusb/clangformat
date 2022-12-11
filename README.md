@@ -3,6 +3,10 @@
 Intended to be the single point of truth of the .clang-format file (C++ code auto formatting configuration).
 Just handling storage and versioning here.
 
+## Requirements
+
+clang-format version: 10
+
 ## Usage
 
 ### Example cmake inclusion in your repo
