@@ -7,7 +7,7 @@ AlignConsecutiveMacros: true
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
 AlignEscapedNewlines: DontAlign
-#AlignOperands: true
+AlignOperands: true
 AlignTrailingComments: false
 AllowAllArgumentsOnNextLine: true
 AllowAllConstructorInitializersOnNextLine: true
@@ -43,7 +43,7 @@ BraceWrapping:
   SplitEmptyNamespace: true
 BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Allman
-#BreakBeforeInheritanceComma: false
+BreakBeforeInheritanceComma: false
 BreakInheritanceList: BeforeComma
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: BeforeComma
@@ -81,12 +81,12 @@ IndentPPDirectives: None
 IndentWidth: 4
 IndentWrappedFunctionNames: false
 KeepEmptyLinesAtTheStartOfBlocks: false
-MacroBlockBegin: '' # #if
-MacroBlockEnd: '' # #endif|#else|#elif
+MacroBlockBegin: '#if'
+MacroBlockEnd: '#endif|#else|#elif'
 MaxEmptyLinesToKeep: 2
 NamespaceIndentation: None
 #NamespaceMacros:
-#  - TOO_PRAGMA_WARNINGS_PUSH
+#  - ...
 PenaltyBreakAssignment: 2
 PenaltyBreakBeforeFirstCallParameter: 1
 PenaltyBreakComment: 300
@@ -97,7 +97,7 @@ PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 200
 PointerAlignment: Left
 ReflowComments: true
-SortIncludes: true
+SortIncludes: CaseInsensitive
 SortUsingDeclarations: true
 SpaceAfterCStyleCast: false
 SpaceAfterLogicalNot: false
@@ -122,13 +122,12 @@ Standard: Latest
 StatementMacros:
   - Q_UNUSED
   - QT_REQUIRE_VERSION
-  #- TOO_PRAGMA_WARNINGS_PUSH
 TabWidth: 4
 #TypenameMacros:
 #  - ...
 UseCRLF: false
 UseTab: Never
-#WhitespaceSensitiveMacros: # v12
-#  - TOO_WARNING_DISABLE_CLANG
-#  - TOO_WARNING_DISABLE_GCC
+#WhitespaceSensitiveMacros:
+#  - ...
+
 ...
