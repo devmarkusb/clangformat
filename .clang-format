@@ -155,5 +155,8 @@ UseCRLF: false
 UseTab: Never
 WhitespaceSensitiveMacros:
   - UL_STRINGIFY
+  - UL_WARNING_DISABLE_CLANG
+  - UL_WARNING_DISABLE_GCC
+  - UL_WARNING_DISABLE_MSVC
 
 ...
