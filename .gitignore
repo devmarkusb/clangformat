@@ -1,1 +1,12 @@
+*.user
+.DS_Store
+.clang-format
 .idea
+.vs
+_build*
+bin
+bin_*
+cmake-build-*
+lib
+lib_*
+venv

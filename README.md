@@ -5,7 +5,7 @@ Just handling storage and versioning here.
 
 ## Requirements
 
-clang-format version: 15
+clang-format version: see CLANGFORMAT_VER in CMakeLists.txt
 
 ## Usage
 
