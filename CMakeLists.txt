@@ -26,12 +26,12 @@ find_program(CLANG_FORMAT "clang-format-${CLANGFORMAT_VER}")
 macro(make_clang_format_project_target cxx_dirs)
     if (CLANG_FORMAT)
         unset(all_cxx_sources)
-        messag(cxx_dirs: ${cxx_dirs})
+        message(cxx_dirs: ${cxx_dirs})
         foreach (cxx_dir ${cxx_dirs})
             glob_recurse_append_cxx_sources(all_cxx_sources ${cxx_dir})
         endforeach ()
 
-        messag(all_cxx_sources: ${all_cxx_sources})
+        message(all_cxx_sources: ${all_cxx_sources})
         add_custom_target(
                 clang-format-${PROJECT_NAME}
                 COMMAND ${CLANG_FORMAT}
