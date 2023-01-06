@@ -23,7 +23,8 @@ endmacro()
 
 find_program(CLANG_FORMAT "clang-format-${CLANGFORMAT_VER}")
 
-macro(make_clang_format_project_target cxx_dirs)
+# See README.md on usage.
+macro(add_clang_format_project_target cxx_dirs)
     if (CLANG_FORMAT)
         unset(all_cxx_sources)
         foreach (cxx_dir ${cxx_dirs})
