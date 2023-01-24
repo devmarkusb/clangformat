@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 3.24)
 
 project(clangformat)
 
-set(CLANGFORMAT_VER 15 CACHE INTERNAL
-        "clang-format-? version to be used at least, compatible with .clang-format file"
+set(MB_CLANGFORMAT_VER 15 CACHE INTERNAL
+        "clang-format-? version to be used preferably, compatible with .clang-format file"
         FORCE)
-message("CLANGFORMAT_VER: ${CLANGFORMAT_VER}")
+
+find_program(CLANGFORMAT_EXE NAMES clang-format-${MB_CLANGFORMAT_VER} clang-format)
+message("CLANGFORMAT_EXE: ${CLANGFORMAT_EXE}")
 
 configure_file(
         ${CMAKE_CURRENT_LIST_DIR}/clangformat.sh.in
@@ -21,11 +23,9 @@ macro(glob_recurse_append_cxx_sources cxx_sources dir)
     list(APPEND ${cxx_sources} ${s})
 endmacro()
 
-find_program(CLANG_FORMAT "clang-format-${CLANGFORMAT_VER}")
-
 # See README.md on usage.
 macro(add_clang_format_project_target cxx_dirs)
-    if (CLANG_FORMAT)
+    if (CLANGFORMAT_EXE)
         unset(all_cxx_sources)
         foreach (cxx_dir ${cxx_dirs})
             glob_recurse_append_cxx_sources(all_cxx_sources ${cxx_dir})
@@ -33,7 +33,7 @@ macro(add_clang_format_project_target cxx_dirs)
 
         add_custom_target(
                 clang-format-${PROJECT_NAME}
-                COMMAND ${CLANG_FORMAT}
+                COMMAND ${CLANGFORMAT_EXE}
                 -i
                 -style=file
                 ${all_cxx_sources}

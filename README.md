@@ -7,7 +7,9 @@ during pre-commit git hooks. See Usage section for that.
 
 ## Requirements
 
-Clang-format version: see CLANGFORMAT_VER in CMakeLists.txt.
+Preferred clang-format version: see MB_CLANGFORMAT_VER in CMakeLists.txt.
+Although plain clang-format is used if the preferred version is not
+available.
 
 This needs to be updated when using features in `.clang-format`
 not supported by lower versions.
