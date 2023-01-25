@@ -1,5 +1,7 @@
 # clangformat
 
+[![build](https://github.com/devmarkusb/clangformat/actions/workflows/cmake.yml/badge.svg)](https://github.com/devmarkusb/clangformat/actions/workflows/cmake.yml)
+
 Intended to be the single point of truth of the/a .clang-format file (C++ code auto formatting configuration).
 Mainly handling storage and versioning here. But there is also useful
 tool support for creating format-all CMake targets or applying formatting
