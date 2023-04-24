@@ -55,10 +55,10 @@ be formatted.
 ```
 set(cxx_dirs "apps;include;libs;sdks;source;src;test")
 
-make_clang_format_project_target("${cxx_dirs}")
+add_clang_format_project_target("${cxx_dirs}")
 ```
 Be careful to really pass a semicolon separated list of subdir strings.
-In the example `make_clang_format_project_target(${cxx_dirs})` without
+In the example `add_clang_format_project_target(${cxx_dirs})` without
 quotes wouldn't work.
 
 ## templates?

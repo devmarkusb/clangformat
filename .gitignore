@@ -1,6 +1,5 @@
 *.user
 .DS_Store
-.clang-format
 .idea
 .vs
 _build*
