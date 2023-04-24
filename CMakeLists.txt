@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.24)
 
 project(clangformat)
 
-set(MB_CLANGFORMAT_VER 15 CACHE
+set(MB_CLANGFORMAT_VER 15 CACHE STRING
     "clang-format-? version to be used preferably, compatible with .clang-format file")
 
 find_program(CLANGFORMAT_EXE NAMES clang-format-${MB_CLANGFORMAT_VER} clang-format)
