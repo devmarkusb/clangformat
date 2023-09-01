@@ -5,7 +5,7 @@ Just handling storage and versioning here.
 
 ## Requirements
 
-clang-format version: 10
+clang-format version: 15
 
 ## Usage
 
