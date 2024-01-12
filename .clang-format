@@ -113,7 +113,8 @@ PenaltyReturnTypeOnItsOwnLine: 200
 PointerAlignment: Left
 QualifierAlignment: Custom
 # 'export' has to be first always anyway, so no need to be supported (it isn't)
-QualifierOrder: ['friend', 'static', 'inline', 'constexpr', 'const', 'volatile', 'restrict', 'type']
+# 'friend' not yet supported, will go first
+QualifierOrder: ['static', 'inline', 'constexpr', 'const', 'volatile', 'restrict', 'type']
 ReferenceAlignment: Left
 ReflowComments: true
 #RemoveSemicolon: true
