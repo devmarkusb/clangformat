@@ -207,7 +207,7 @@ ReflowComments: true
 RemoveBracesLLVM: false
 RemoveEmptyLinesInUnwrappedLines: true
 RemoveParentheses: ReturnStatement
-RemoveSemicolon: true
+RemoveSemicolon: false
 RequiresClausePosition: OwnLine
 RequiresExpressionIndentation: OuterScope
 SeparateDefinitionBlocks: Always
