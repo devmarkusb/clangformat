@@ -98,23 +98,25 @@ file(COPY ${mb-clangformat_SOURCE_DIR}/clangformat.sh DESTINATION ${PROJECT_SOUR
 
 Then you could add
 ```
+#!/usr/bin/env bash
+
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 $script_dir/../clangformat.sh
 ```
-to your pre-commit git hook file, in order to apply formatting on each commit
+to your repo's local .githooks/pre-commit git hook file, to apply formatting on each commit
 automatically.
 
 Additionally, you can include the following lines in your project's
 `CMakeLists.txt` files, which will add a clang-format target per project.
-When building the target every file from list of subdirs (recursively) will
+When building the target, every file from the list of subdirs (recursively) will
 be formatted.
 ```
 set(cxx_dirs "apps;include;libs;sdks;source;src;test")
 
 add_clang_format_project_target("${cxx_dirs}")
 ```
-Be careful to really pass a semicolon separated list of subdir strings.
+Be careful to really pass a semicolon-separated list of subdir strings.
 In the example `add_clang_format_project_target(${cxx_dirs})` without
 quotes wouldn't work.
 
